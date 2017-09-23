@@ -1,19 +1,21 @@
 var Counter = React.createClass({
     getInitialState: function() {
         return {
-            counter: 10
+            counter: 10,
+            add: 9,
+            subtraction: 8
         };
     },
 
     increment: function() {
         this.setState({
-            counter: this.state.counter + 1
+            add: this.state.add + 1
         });
     },
     
     decrement: function() {
         this.setState({
-            counter: this.state.counter - 1
+            subtraction: this.state.subtraction - 1
         });
     },
     
@@ -26,9 +28,9 @@ var Counter = React.createClass({
     render: function() {
         return (React.createElement('ul', {className: 'main'},
             React.createElement('li',  {onClick: this.increment}, 
-                React.createElement('button', {}, 'Licznik dodatni: ' + this.state.counter.add)),
+                React.createElement('button', {}, 'Licznik dodatni: ' + this.state.add)),
             React.createElement('li', {onClick: this.decrement}, 
-                React.createElement('button', {}, 'Licznik ujemny: ' + this.state.counter)),
+                React.createElement('button', {}, 'Licznik ujemny: ' + this.state.subtraction)),
             React.createElement('li', {onClick: this.multiply}, 
                 React.createElement('button', {}, 'Licznik mnożenia: ' + this.state.counter)),
       )
