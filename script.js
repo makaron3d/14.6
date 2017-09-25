@@ -8,21 +8,18 @@ var Counter = React.createClass({
     increment: function() {
         this.setState({
             counter: this.state.counter + 1,
-
         });
     },
     
     decrement: function() {
         this.setState({
             counter: this.state.counter - 1,
-
         });
     },
     
     multiply: function() {
         this.setState({
             counter: this.state.counter * 2,
-    
         });
     },
     
@@ -66,23 +63,20 @@ var Counter = React.createClass({
     componentWillUnmount: function() {
         console.log('componentWillUnmount - component will be removed');
     },
-
-
     
-    render: function() {
-return (React.createElement('div', {className: 'main'},
-React.createElement('li', {onClick: this.increment}, 
-React.createElement('button', {}, 'Licznik dodatni: ' + this.state.counter)),
-React.createElement('li', {onClick: this.decrement}, 
-React.createElement('button', {}, 'Licznik ujemny: ' + this.state.counter)),
-React.createElement('li', {onClick: this.multiply}, 
-React.createElement('button', {}, 'Licznik mnożenia: ' + this.state.counter)),
-)
+        render: function() {
+            return (React.createElement('div', {className: 'main'},
+                        React.createElement('li', {onClick: this.increment}, 
+                        React.createElement('button', {}, 'Licznik dodatni: ' + this.state.counter)),
+                        React.createElement('li', {onClick: this.decrement}, 
+                        React.createElement('button', {}, 'Licznik ujemny: ' + this.state.counter)),
+                        React.createElement('li', {onClick: this.multiply}, 
+                        React.createElement('button', {}, 'Licznik mnożenia: ' + this.state.counter)),
+            )
 
-)}    
+        )}    
 });  
     
-
 var elements = React.createClass({
     render: function () {
         return (
@@ -91,13 +85,7 @@ var elements = React.createClass({
                 React.createElement(Counter),
                 React.createElement(Counter),
                 React.createElement(Counter),
-                                
-
-
-               
-        
-        )
-            
+        )      
     )}
 });
 
